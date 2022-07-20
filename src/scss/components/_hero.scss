@@ -1,0 +1,129 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 960px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.4);
+  }
+
+  &__container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__title {
+    padding-top: 264px;
+    margin: 0;
+    margin-bottom: 23px;
+    max-width: 555px;
+    font-family: "Playfair";
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 64px;
+    color: var(--color-white);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 44px;
+    font-family: "Gotham";
+    font-weight: 400;
+    font-size: 18px;
+    max-width: 555px;
+    color: var(--color-white);
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 15px 20px;
+    font-family: "Gotham";
+    font-weight: 500;
+    font-size: 15px;
+    background-color: var(--color-lightingYellow);
+    color: rgba(#080425, 0.5);
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-buddhaGold);
+    }
+  }
+
+  &__btn:nth-child(1) {
+    margin-right: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 94px;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.banner-slider {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  .swiper-slide {
+    height: 100%;
+  }
+}
+
+.banner-pag {
+  bottom: 20px !important;
+  width: auto !important;
+  left: auto !important;
+  right: 0;
+
+  .swiper-pagination-bullet {
+    margin: 0 10px !important;
+    width: 5px;
+    height: 5px;
+    opacity: 0.6;
+    background-color: #9f9e9f;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-buddhaGold);
+      opacity: 1;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    position: relative;
+    background-color: var(--color-white);
+    opacity: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--color-white);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        border-color: var(--color-buddhaGold);
+      }
+    }
+  }
+}

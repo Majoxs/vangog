@@ -1,0 +1,53 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 10px;
+  padding-bottom: 4px;
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+}
+
+.contact {
+  padding-left: 25px;
+  max-width: 220px;
+  font-family: "Gotham";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-white);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+
+  &__descr {
+    margin: 0;
+  }
+
+  &__phone-link {
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--color-buddhaGold);
+    }
+  }
+
+  &--phone {
+    background-image: url("../img/phone.png");
+  }
+
+  &--address {
+    background-image: url("../img/map.png");
+  }
+}

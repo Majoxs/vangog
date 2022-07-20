@@ -3,4 +3,6 @@ export default {
   documentEl: document,
   htmlEl: document.documentElement,
   bodyEl: document.body,
+  arrowEls: document.querySelectorAll('.arrow'),
+  bannerSlider: document.querySelector('.banner-slider'),
 }

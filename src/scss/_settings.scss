@@ -11,6 +11,8 @@ html {
 body {
   font-family: "ProximaNova", sans-serif;
   font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
   color: var(--color-blackRock);
   background-color: var(--color-white);
 }
@@ -80,9 +82,9 @@ ul {
 }
 
 .container {
+  max-width: 1214px;
   margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: var(--container-width);
+  padding: 0 20px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
