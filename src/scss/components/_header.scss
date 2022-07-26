@@ -32,6 +32,14 @@
 
   &__descr {
     margin: 0;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__phone-mail {
+    border-bottom: 1px solid var(--color-lightingYellow);
   }
 
   &__phone-link {
@@ -49,5 +57,9 @@
 
   &--address {
     background-image: url("../img/map.png");
+  }
+
+  &--mail {
+    background-image: url("../img/mail.png");
   }
 }

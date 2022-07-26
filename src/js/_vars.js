@@ -5,4 +5,5 @@ export default {
   bodyEl: document.body,
   arrowEls: document.querySelectorAll('.arrow'),
   bannerSlider: document.querySelector('.banner-slider'),
+  rentSlider: document.querySelector('.rent-slider'),
 }

@@ -1,0 +1,76 @@
+.footer {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 0 1 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    width: 100%;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 106px 30px 82px;
+  }
+
+  &__copy {
+    margin: 0;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: rgba(#080425, 0.6);
+  }
+
+  &__copy-block {
+    position: relative;
+    padding-left: 40px;
+
+    span {
+      font-family: "ProximaNova";
+      font-weight: 400;
+      font-size: 12px;
+      color: rgba(#080425, 0.6);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 29px;
+      height: 29px;
+      background-image: url("../img/logo-tian.png");
+    }
+  }
+
+  &__copy-link {
+    font-family: "ProximaNova";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    border-bottom: 1px solid rgba(#dfdee2, 0.6);
+    color: rgba(#080425, 0.6);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--color-buddhaGold);
+    }
+  }
+}
+
+.footer-contact {
+  max-width: 240px;
+  width: 100%;
+  color: var(--color-blackRock);
+
+  .contact__phone-mail {
+    display: inline-block;
+  }
+}

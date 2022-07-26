@@ -1,9 +1,21 @@
 .hero {
   position: relative;
+  width: 100%;
   height: 100vh;
-  min-height: 960px;
+}
 
-  &::before {
+.banner-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-slide {
+  position: relative;
+  height: 100%;
+
+  &::after {
     content: "";
     position: absolute;
     left: 0;
@@ -11,15 +23,25 @@
     top: 0;
     bottom: 0;
     background-color: rgba(0,0,0, 0.4);
+    z-index: 2;
   }
 
-  &__container {
+  img {
     position: relative;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 3;
+    transform: translate(calc(-50% - 217px), calc(-50% + 82px));
   }
 
   &__title {
-    padding-top: 264px;
     margin: 0;
     margin-bottom: 23px;
     max-width: 555px;
@@ -32,17 +54,18 @@
 
   &__descr {
     margin: 0;
-    margin-bottom: 44px;
+    margin-bottom: 46px;
     font-family: "Gotham";
     font-weight: 400;
     font-size: 18px;
+    line-height: 26px;
     max-width: 555px;
     color: var(--color-white);
   }
 
   &__btn {
     display: inline-block;
-    padding: 15px 20px;
+    padding: 16px 21px;
     font-family: "Gotham";
     font-weight: 500;
     font-size: 15px;
@@ -56,37 +79,16 @@
   }
 
   &__btn:nth-child(1) {
-    margin-right: 20px;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 0 94px;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
-.banner-slider {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-
-  .swiper-slide {
-    height: 100%;
+    margin-right: 19px;
   }
 }
 
 .banner-pag {
-  bottom: 20px !important;
+  bottom: 53px !important;
   width: auto !important;
   left: auto !important;
-  right: 0;
+  right: 50%;
+  transform: translateX(calc(-50% + 494px));
 
   .swiper-pagination-bullet {
     margin: 0 10px !important;
@@ -126,4 +128,80 @@
       }
     }
   }
+}
+
+.banner-button-prev,
+.banner-button-next {
+  position: absolute;
+  display: block;
+  top: 58%;
+  padding: 0;
+  border: none;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 5;
+
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 11px;
+    width: 22px;
+    height: 22px;
+    fill: var(--color-white);
+    transform: translateX(-50%);
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      fill: var(--color-buddhaGold);
+    }
+  }
+}
+
+.banner-button-prev {
+  left: 0.5%;
+
+  svg {
+    left: auto;
+    right: 50%;
+    transform: rotate(180deg) translateX(-50%);
+  }
+}
+
+.banner-button-next {
+  right: 0.5%;
+}
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 5.4%;
+  width: 20px;
+  height: 26px;
+  z-index: 5;
+  transform: translateX(calc(-50% - 613px));
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background-image: url('../img/scroll-down-arrow.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    animation: down 1.5s ease infinite;
+  }
+}
+
+@keyframes down {
+  0% {bottom: -25px;}
+  50% {bottom: -35px;}
+  100% {bottom: -25px;}
 }

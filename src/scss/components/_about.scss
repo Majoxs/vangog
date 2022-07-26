@@ -1,0 +1,52 @@
+.about {
+  position: relative;
+  padding-top: 66px;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 355px;
+    height: 450px;
+    left: 50%;
+    top: -110px;
+    background-image: url('../img/logo-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &__title-descr {
+    margin-bottom: 33px;
+  }
+
+  &__tagline {
+    margin: 0 auto;
+    margin-bottom: 33px;
+    font-family: "Playfair";
+    font-weight: 400;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 34px;
+    max-width: 910px;
+    text-align: center;
+  }
+
+  &__descr {
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 730px;
+    text-align: center;
+    color: rgba(#080425, 0.6);
+  }
+
+  &__descr + .about__descr {
+    margin-top: 10px;
+  }
+
+  &__btn {
+    margin-top: 42px;
+  }
+}

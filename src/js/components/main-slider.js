@@ -9,4 +9,17 @@ const swiper = new Swiper(vars.bannerSlider, {
     type: 'bullets',
     clickable: true,
   },
+  navigation: {
+    nextEl: '.banner-button-next',
+    prevEl: '.banner-button-prev',
+  },
+});
+
+const swiperRent = new Swiper(vars.rentSlider, {
+  loop: true,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.rent-button-next',
+    prevEl: '.rent-button-prev',
+  },
 });

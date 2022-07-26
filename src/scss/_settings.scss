@@ -12,7 +12,6 @@ body {
   font-family: "ProximaNova", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 27px;
   color: var(--color-blackRock);
   background-color: var(--color-white);
 }
@@ -91,10 +90,6 @@ ul {
   outline: none;
 }
 
-.centered {
-  text-align: center;
-}
-
 .dis-scroll {
   position: fixed;
   left: 0;
@@ -107,4 +102,52 @@ ul {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  font-family: "ProximaNova", sans-serif;
+  font-size: 12.5px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(#080425, 0.6);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 50%;
+    top: -15px;
+    background-color: var(--color-lightingYellow);
+    transform: translateX(-50%);
+  }
+}
+
+.title-descr {
+  margin: 0;
+  margin-bottom: 53px;
+  font-family: "Playfair";
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 58px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 20px;
+  font-family: "Gotham";
+  font-weight: 500;
+  font-size: 15px;
+  background-color: var(--color-lightingYellow);
+  color: rgba(#080425, 0.5);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-buddhaGold);
+  }
 }

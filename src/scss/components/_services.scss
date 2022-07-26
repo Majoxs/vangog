@@ -1,0 +1,88 @@
+.services {
+  padding-top: 87px;
+
+  &__title-descr {
+    margin-bottom: 48px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 51px;
+  }
+
+  &__item {
+    position: relative;
+    flex: 0 0 340px;
+  }
+
+  &__img-wrap {
+    overflow: hidden;
+  }
+
+  &__img {
+    display: block;
+    position: relative;
+    width: 340px;
+    height: 227px;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__link-btn {
+    display: inline-block;
+    position: relative;
+    margin-left: 34px;
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-lightingYellow);
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-buddhaGold);
+
+      svg {
+        fill: #6d4c13;
+      }
+    }
+
+    svg {
+      position: relative;
+      left: 50%;
+      top: 10px;
+      width: 22px;
+      height: 22px;
+      fill: #815e22;
+      transform: translateX(-50%);
+      transition: fill 0.3s ease-in-out;
+    }
+  }
+
+  &__block-link {
+    position: absolute;
+    padding: 39px 30px 5px 42px;
+    bottom: 0;
+    right: 0;
+    width: 262px;
+    height: 88px;
+    background-color: var(--color-white);
+  }
+
+  &__link {
+    font-family: "ProximaNova";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-blackRock);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--color-buddhaGold);
+    }
+  }
+}
