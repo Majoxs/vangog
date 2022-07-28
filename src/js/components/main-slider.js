@@ -22,4 +22,9 @@ const swiperRent = new Swiper(vars.rentSlider, {
     nextEl: '.rent-button-next',
     prevEl: '.rent-button-prev',
   },
+  pagination: {
+    el: '.rent-pag',
+    type: 'bullets',
+    clickable: true,
+  },
 });

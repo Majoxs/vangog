@@ -2,6 +2,11 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+
+    @include small-tablet {
+      display: block;
+      padding-top: 20px;
+    }
   }
 
   &__item {
@@ -11,6 +16,12 @@
     align-items: center;
     min-height: 150px;
     width: 100%;
+
+    @include small-tablet {
+      justify-content: start;
+      padding: 10px 20px;
+      min-height: auto;
+    }
   }
 
   &__bottom {
@@ -18,6 +29,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px 106px 30px 82px;
+
+    @include small-tablet {
+      padding: 20px;
+    }
+
+    @include mobile {
+      display: block;
+      text-align: center;
+      padding: 20px 5px;
+    }
   }
 
   &__copy {
@@ -31,6 +52,11 @@
   &__copy-block {
     position: relative;
     padding-left: 40px;
+
+    @include mobile {
+      display: inline-block;
+      margin-top: 20px;
+    }
 
     span {
       font-family: "ProximaNova";

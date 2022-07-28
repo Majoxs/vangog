@@ -3,6 +3,10 @@
   padding-top: 66px;
   text-align: center;
 
+  @media (max-width: 400px) {
+    padding-top: 50px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -15,10 +19,20 @@
     background-repeat: no-repeat;
     transform: translateX(-50%);
     z-index: -1;
+
+    @media (max-width: 400px) {
+      width: 260px;
+      height: 350px;
+      top: -90px;
+    }
   }
 
   &__title-descr {
     margin-bottom: 33px;
+
+    @media (max-width: 400px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__tagline {
@@ -31,6 +45,12 @@
     line-height: 34px;
     max-width: 910px;
     text-align: center;
+
+    @media (max-width: 400px) {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   &__descr {
@@ -40,6 +60,11 @@
     max-width: 730px;
     text-align: center;
     color: rgba(#080425, 0.6);
+
+    @media (max-width: 400px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__descr + .about__descr {
@@ -48,5 +73,9 @@
 
   &__btn {
     margin-top: 42px;
+
+    @media (max-width: 400px) {
+      margin-top: 30px;
+    }
   }
 }

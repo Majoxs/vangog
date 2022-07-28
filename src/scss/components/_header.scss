@@ -3,7 +3,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10;
   padding-top: 10px;
   padding-bottom: 4px;
 
@@ -11,11 +11,54 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @include small-tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  &__contact {
+    @include small-tablet {
+      min-width: 230px;
+      justify-self: end;
+    }
+
+    @media (max-width: 400px) {
+      min-width: 190px;
+    }
+
+    .contact__descr {
+      @include mobile {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    .contact__phone-link {
+      @include mobile {
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
   }
 
   &__logo {
     margin-left: 90px;
     margin-right: 90px;
+
+    @include small-tablet {
+      margin: 0;
+      grid-column: 1;
+      grid-row: 1 / 2 span;
+    }
+
+    img {
+      @include small-tablet {
+        width: 80px;
+      }
+    }
   }
 }
 
@@ -34,6 +77,7 @@
     margin: 0;
 
     span {
+      display: block;
       font-weight: 500;
     }
   }
